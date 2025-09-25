@@ -6,7 +6,7 @@ Feel free to propose changes for new features in the Issues section.
 
 # Prerequisites
 
-You should have [Ansible](https://github.com/ansible/ansible) installed on a the system that will run the playbook.
+You should have [Ansible](https://github.com/ansible/ansible) installed on the system that will run the playbook.
 
 To install the prerequisites, run `ansible-galaxy install -r requirements.yml`.
 
@@ -20,10 +20,10 @@ Modify the `host_vars` and `group_vars` files according to your desired setup. F
 
 # Running the playbook
 
-Once the inventory and variables are setup, run the playbook using `ansible-playbook playbooks/setup.yml -i inventories/<name>/hosts.ym;`.
+Once the inventory and variables are setup, run the playbook using `ansible-playbook playbooks/setup.yml -i inventories/<name>/hosts.yml`.
 You can add `--ask-ssh-pass` / `-k` if you don't have a public ssh key setup on the proxmox host, and `--ask-pass` / `-K` if running with a non-root user.
 
-The playbook also supports ansible tags, which can be used to run parts of the playbook only. 
+The playbook also supports Ansible tags, which can be used to run parts of the playbook only. 
 The current available tags are:
 - `setup` - runs only the setup part of the playbook
 - `templates` - creates VM templates from cloud-init-ready images
